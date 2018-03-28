@@ -79,9 +79,9 @@ jQuery(function ($) {
             var carousel = $(this),
                 width = carousel.innerWidth();
 
-            if (width >= 600) {
+            if (width >= 768) {
                 width = width / 2;
-            } else if (width >= 350) {
+            } else {
                 width = width / 1;
             }
 
@@ -127,6 +127,33 @@ jQuery(function ($) {
     $(mobile).on('click', function (e) {
         e.preventDefault();
         menu.slideToggle();
+    });
+
+    //SEND MESSAGE
+    var form = $("#contact-form");
+
+    $(form).submit(function (event) {
+        event.preventDefault();
+        var formData = $(form).serialize();
+        $.ajax({
+                type: 'POST',
+                url: $(form).attr('action'), data: formData
+            }
+        ).done(function (response) {
+            //$(form).hide();
+            $('#successMessage h3').text(response);
+            $('#successMessage').show();
+            setTimeout(function() { $('#successMessage').hide(); }, 5000);
+            $('#name').val('');
+            $('#email').val('');
+            $('#phone').val('');
+            $('#message').val('');
+        }).fail(function (data) {
+            $('#errorMessage h3').text(data.responseText);
+            $('#errorMessage').show();
+        });
+
+        return false;
     });
 
 });

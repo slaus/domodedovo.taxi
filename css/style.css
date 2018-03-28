@@ -844,6 +844,7 @@ ol {
 
 .page .text-primary {
     color: #caaa58;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .text-bold {
@@ -1254,7 +1255,7 @@ body {
 
 @media (min-width: 1200px) {
     .page-head {
-        padding-top: 54px;
+        padding-top: 20px;
         padding-bottom: 20px;
     }
 }
@@ -1333,7 +1334,8 @@ hr {
 @media (min-width: 768px) {
     .bg-image-1 {
         background-image: url(../images/home-02.jpg);
-        background-position: left top;
+        background-position: center top;
+        max-height: 650px;
     }
 }
 
@@ -1425,6 +1427,11 @@ hr {
     position: relative;
 }
 
+.bg-image-1 h1.heading-divider {
+    color: #caaa58;
+    text-shadow: 1px 1px 1px #000;
+}
+
 @media (min-width: 1400px) {
     .heading-divider:before {
         content: '';
@@ -1485,6 +1492,7 @@ hr.divider:after {
 .product-price {
     font-size: 25px;
     color: #caaa58;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .product-price .small {
@@ -2572,4 +2580,10 @@ ol, ul {
 }
 .mobile-icon {
     margin: 0 5px 5px 0;
+}
+.text-shadow {
+    text-shadow: 1px 1px 1px #000;
+}
+.box-shadow {
+    box-shadow: 1px 1px 1px #000;
 }

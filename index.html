@@ -64,17 +64,10 @@
                         <h1 class="heading-divider">24 часа 7 дней в неделю</h1>
                     </div>
                     <div class="col-lg-6 offset-top-25 offset-lg-top-35">
-                        <!--<div class="box-info">-->
-                        <!--<h2 class="text-primary">Позвоните прямо сейчас!</h2><a href="tel:+74997032412" class="tel">+7(499)7032412</a>-->
-                        <!--</div>-->
                         <div id="sedi-orderform2" data-ordertype="rush" data-city="Москва" data-warningcost="false"
                              data-map="false" data-keyword="false">форма заказа
                         </div>
                     </div>
-                    <!--<div class="col-lg-12 offset-top-20 offset-lg-top-30">-->
-                    <!--<p>Оператор немедленно перезвонит Вам <br class="hidden visible-sm visible-md visible-lg">и-->
-                    <!--сообщит номер машины</p>-->
-                    <!--</div>-->
                 </div>
             </div>
         </section>
@@ -186,7 +179,7 @@
 
         <!--24 hours 7 days a week-->
         <section class="bg-husk bg-image bg-image-4 section-50 section-sm-70 section-lg-120" id="order">
-            <div class="container text-lg-left">
+            <div class="container text-lg-left text-shadow">
                 <div class="row">
                     <div class="col-lg-7">
                         <h1>24 часов 7 дней в неделю</h1>
@@ -305,7 +298,7 @@
         </section>
 
         <section class="section-50 bg-husk bg-image-7 bg-image section-sm-70 section-lg-130">
-            <div class="container text-lg-left">
+            <div class="container text-lg-left text-shadow">
                 <div class="row">
                     <div class="col-lg-7">
                         <h1>Наш сайт на мобильных устройствах</h1>
@@ -371,22 +364,28 @@
                     заранее оставив заявку с помощью формы обратной связи или по электронной почте.
                 </p>
                 <!-- Rd Mailform result field-->
-                <div class="rd-mailform-validate">
-                    <!-- RD Mailform-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="successMessage" class="col-xs-12 text-success text-center"><h3></h3></div>
+                        <div id="errorMessage" class="col-xs-12 text-danger text-center"><h3></h3></div>
+                    </div>
                 </div>
-                <form method="post" action="" class="rd-mailform text-md-right">
+                <form id="contact-form" method="post" action="sendmail.php" class="rd-mailform text-md-right">
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="mfInput"><input type="text" name="name" placeholder="Имя"></div>
+                        <div class="col-md-4">
+                            <div class="mfInput"><input type="text" name="name" id="name" placeholder="Ваше имя" required></div>
                         </div>
-                        <div class="col-md-6 offset-top-20 offset-md-top-0">
-                            <div class="mfInput"><input type="text" name="email" placeholder="Почта"></div>
+                        <div class="col-md-4 offset-top-20 offset-md-top-0">
+                            <div class="mfInput"><input type="email" name="email" id="email" placeholder="Ваша почта" required></div>
+                        </div>
+                        <div class="col-md-4 offset-top-20 offset-md-top-0">
+                            <div class="mfInput"><input type="tel" name="phone" id="phone" placeholder="Ваш телефон" required></div>
                         </div>
                         <div class="col-md-12 offset-top-20 offset-md-top-30">
-                            <div class="mfInput"><textarea name="message" placeholder="Сообщение"></textarea></div>
+                            <div class="mfInput"><textarea name="message" id="message" placeholder="Ваше сообщение" required></textarea></div>
                         </div>
                     </div>
-                    <button class="btn btn-default offset-top-20 offset-md-top-30 offset-lg-top-45">Отправить
+                    <button id="submit" type="submit" class="btn btn-default offset-top-20 offset-md-top-30 offset-lg-top-45">Отправить
                         сообщение
                     </button>
                 </form>
@@ -450,7 +449,7 @@
             </div>
         </div>
     </footer>
-    <a id="back-to-top" class="back-to-top">НАВЕРХ</a>
+    <a id="back-to-top" class="back-to-top box-shadow">НАВЕРХ</a>
 
 </div>
 <!-- includes:olark-->
